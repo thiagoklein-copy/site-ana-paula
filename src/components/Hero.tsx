@@ -54,82 +54,77 @@ const DIFFERENTIATORS = [
 
 export default function Hero() {
   return (
-    <section id="topo" aria-label="Apresentação" className="relative pt-20 sm:pt-24">
-      {/* Full-bleed hero photo plane */}
-      <div className="relative min-h-[78vh] overflow-hidden sm:min-h-[85vh]">
-        {/* TODO: Swap placeholder with real Instagram photo of Ana Paula */}
-        <Image
-          src="/images/hero-placeholder.jpg"
-          alt="Ana Paula Sobierai, psicóloga clínica em Novo Hamburgo"
-          fill
-          priority
-          className="object-cover object-[center_20%]"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/75 via-primary-dark/45 to-primary-dark/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/70 via-transparent to-primary-dark/20" />
+    <section id="topo" aria-label="Apresentação" className="relative bg-cream pt-20 sm:pt-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-16">
+        {/* Text — left */}
+        <FadeIn className="order-2 lg:order-1">
+          <p className="mb-4 font-script text-lg italic text-primary sm:text-xl">
+            Psicóloga Clínica · Mestranda em Psicologia
+          </p>
 
-        <div className="relative mx-auto flex h-full min-h-[78vh] max-w-6xl flex-col justify-end px-5 pb-28 pt-28 sm:min-h-[85vh] sm:pb-32 lg:px-8">
-          <FadeIn className="max-w-2xl">
-            <p className="mb-4 font-script text-lg italic text-beige/95 sm:text-xl">
-              Psicóloga Clínica · Mestranda em Psicologia
+          <h1 className="font-display text-4xl font-bold leading-[1.15] tracking-tight text-ink sm:text-5xl lg:text-[3.25rem]">
+            Um espaço para você se{" "}
+            <em className="font-script text-[1.08em] font-normal italic text-primary">
+              escutar
+            </em>{" "}
+            com mais verdade
+          </h1>
+
+          <div className="mt-6 max-w-md">
+            <HighlightBox
+              rotate={-1.8}
+              className="block border border-primary/10 text-sm leading-relaxed sm:text-[0.95rem]"
+            >
+              Saber tudo antecipadamente parece confortável, mas roubaria a
+              surpresa da vida.
+            </HighlightBox>
+          </div>
+
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
+            Psicoterapia psicanalítica para crianças, adolescentes, adultos e
+            idosos, em Novo Hamburgo e online. Um lugar para acolher o que dói
+            sem nome.
+          </p>
+
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <WhatsAppButton label="Falar no WhatsApp" />
+            <a
+              href="#sobre"
+              className="text-sm font-medium text-primary underline-offset-4 transition-colors hover:underline"
+            >
+              Conhecer meu trabalho ↓
+            </a>
+          </div>
+        </FadeIn>
+
+        {/* Image — right */}
+        <FadeIn delay={0.1} className="relative order-1 lg:order-2">
+          <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[3/4] lg:aspect-[4/5]">
+            <Image
+              src="/images/ana-paula.png"
+              alt="Ana Paula Sobierai, psicóloga clínica em Novo Hamburgo"
+              fill
+              priority
+              className="object-cover object-[center_15%]"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          {/* Floating glassmorphic credential card */}
+          <aside className="absolute -bottom-4 left-4 right-4 rounded-2xl border border-white/40 bg-cream/90 p-4 shadow-glass backdrop-blur-md sm:left-auto sm:right-4 sm:max-w-[240px]">
+            <p className="font-display text-2xl font-bold text-primary-dark">894+</p>
+            <p className="mt-1 text-sm leading-snug text-ink-muted">
+              pessoas acompanham no Instagram
             </p>
-
-            <h1 className="font-display text-4xl font-bold leading-[1.15] tracking-tight text-cream sm:text-5xl lg:text-[3.4rem]">
-              Um espaço para você se{" "}
-              <em className="font-script text-[1.08em] font-normal italic text-beige">
-                escutar
-              </em>{" "}
-              com mais verdade
-            </h1>
-
-            <div className="mt-6 max-w-md">
-              <HighlightBox
-                rotate={-1.8}
-                className="block text-sm leading-relaxed sm:text-[0.95rem]"
-              >
-                Saber tudo antecipadamente parece confortável, mas roubaria a
-                surpresa da vida.
-              </HighlightBox>
-            </div>
-
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/90 sm:text-lg">
-              Psicoterapia psicanalítica para crianças, adolescentes, adultos e
-              idosos, em Novo Hamburgo e online. Um lugar para acolher o que dói
-              sem nome.
+            <p className="mt-1 text-xs tracking-wide text-ink-muted/80">
+              @psi.anapaulasobierai
             </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <WhatsAppButton label="Falar no WhatsApp" />
-              <a
-                href="#sobre"
-                className="text-sm font-medium text-cream/90 underline-offset-4 transition-colors hover:text-cream hover:underline"
-              >
-                Conhecer meu trabalho ↓
-              </a>
-            </div>
-          </FadeIn>
-
-          {/* Atvisor-style floating glassmorphic credential card */}
-          <FadeIn
-            delay={0.15}
-            className="absolute bottom-8 right-5 hidden max-w-[260px] sm:block lg:right-8"
-          >
-            <aside className="rounded-2xl border border-white/25 bg-white/15 p-4 shadow-glass backdrop-blur-md">
-              <p className="font-display text-2xl font-bold text-cream">894+</p>
-              <p className="mt-1 text-sm leading-snug text-cream/90">
-                pessoas acompanham no Instagram
-              </p>
-              <p className="mt-2 text-xs tracking-wide text-beige/80">
-                @psi.anapaulasobierai
-              </p>
-            </aside>
-          </FadeIn>
-        </div>
+          </aside>
+        </FadeIn>
       </div>
 
       {/* Icon-label trio row (Atvisor pattern) */}
-      <div className="border-b border-primary/10 bg-cream">
+      <div className="mt-8 border-y border-primary/10 bg-beige/40 sm:mt-12">
         <ul className="mx-auto grid max-w-6xl gap-6 px-5 py-10 sm:grid-cols-3 lg:px-8 lg:py-12">
           {DIFFERENTIATORS.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.08} as="li">
@@ -147,17 +142,6 @@ export default function Hero() {
             </FadeIn>
           ))}
         </ul>
-      </div>
-
-      {/* Mobile floating card under hero */}
-      <div className="bg-cream px-5 pb-2 sm:hidden">
-        <aside className="-mt-6 rounded-2xl border border-primary/10 bg-white/70 p-4 shadow-glass backdrop-blur-md">
-          <p className="font-display text-xl font-bold text-primary-dark">894+</p>
-          <p className="mt-1 text-sm text-ink-muted">
-            pessoas acompanham no Instagram
-          </p>
-          <p className="mt-1 text-xs text-ink-muted/80">@psi.anapaulasobierai</p>
-        </aside>
       </div>
     </section>
   );

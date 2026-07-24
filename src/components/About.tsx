@@ -20,12 +20,11 @@ export default function About() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <FadeIn className="relative">
           <div className="relative aspect-[4/5] overflow-hidden">
-            {/* TODO: Swap placeholder with real Instagram portrait of Ana Paula */}
             <Image
-              src="/images/about-placeholder.jpg"
+              src="/images/ana-paula.png"
               alt="Retrato de Ana Paula Sobierai"
               fill
-              className="object-cover"
+              className="object-cover object-[center_15%]"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>

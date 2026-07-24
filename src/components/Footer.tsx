@@ -9,7 +9,7 @@ const jsonLd = {
   url: "https://www.anapaulasobierai.com.br",
   telephone: `+${BUSINESS.phoneE164}`,
   email: BUSINESS.email,
-  image: "https://www.anapaulasobierai.com.br/images/about-placeholder.jpg",
+  image: "https://www.anapaulasobierai.com.br/images/ana-paula.png",
   address: {
     "@type": "PostalAddress",
     streetAddress: BUSINESS.address.street,
