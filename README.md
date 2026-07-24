@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ana Paula Sobierai — Site Institucional
 
-## Getting Started
+Site premium de conversão para Ana Paula Sobierai da Cruz, psicóloga clínica (abordagem psicanalítica) em Novo Hamburgo/RS.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4 (cores centralizadas em `tailwind.config.ts` + `@theme`)
+- Framer Motion (fade-up leve)
+- Deploy-ready na Vercel
+
+## Desenvolvimento
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Trocar fotos (Instagram)
 
-To learn more about Next.js, take a look at the following resources:
+Substitua os placeholders em `public/images/`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Arquivo | Uso |
+|---|---|
+| `hero-placeholder.jpg` | Hero full-bleed |
+| `about-placeholder.jpg` | Seção Sobre |
+| `approach-placeholder.jpg` | Seção Minha visão (natureza) |
+| `og-placeholder.jpg` | Open Graph (1200×630) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Há comentários `TODO` nos componentes `Hero`, `About` e `Approach` marcando os pontos de troca.
 
-## Deploy on Vercel
+## Contato / WhatsApp
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Número: `(51) 99738-9430` → `wa.me/5551997389430`  
+Mensagem padrão: *"Olá, Ana! Vi seu site e gostaria de agendar uma conversa."*
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Nota
+
+**Sem preços** em nenhuma seção — requisito explícito do projeto.
